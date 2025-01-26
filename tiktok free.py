@@ -58,8 +58,9 @@ M = '\x1b[1;37m'#ابیض
 hit,ge,be,gt,bt=0,0,0,0,0
 VSD=5
 hhp=[]
-iid =input(F+"ID:" )
-tok=input(A+"TOKEN:"+S)
+iid =input
+tok=input('تم ايقاف الاداة من قبل المطور احمد خان
+	  للاشتراك راسلني خاص AHMED_KHANA
 def info(email):
   global hit,iid,tok
   hit+=1
