@@ -244,11 +244,19 @@ def Gmail(email):
         info(email)
         
         ge+=1
-        sys.stdout.write(f'''\r{F}Hits : {M}{ge}{Z} | Bad Tk: {M}{bt}{X} |Bad Em : {M}{be}{C} | Good Gk : {M}{gt}'''),sys.stdout.flush()
+        sys.stdout.write(f'''\r
+	{F}Hits : {M}{ge}{Z} 
+ | Bad Tk: {M}{bt}{X} 
+ |Bad Em : {M}{be}{C} 
+ | Good Gk : {M}{gt}'''),sys.stdout.flush()
     else:
         
         be+=1
-        sys.stdout.write(f'''\r{F}Hits : {M}{ge}{Z} | Bad Tk: {M}{bt}{X} |Bad Em : {M}{be}{C} | Good Gk : {M}{gt}'''),sys.stdout.flush()
+        sys.stdout.write(f'''\r
+	{F}Hits : {M}{ge}{Z} 
+ | Bad Tk: {M}{bt}{X} 
+ |Bad Em : {M}{be}{C} 
+ | Good Gk : {M}{gt}'''),sys.stdout.flush()
 
 def req(email):
 	global ge,be,gt,bt
@@ -257,12 +265,20 @@ def req(email):
 		if r['status']=='''not registered''':
 			
 			bt+=1
-			sys.stdout.write(f'''\r{F}Hits : {M}{ge}{Z} | Bad Tk: {M}{bt}{X} |Bad Em : {M}{be}{C} | Good Gk : {M}{gt}'''),sys.stdout.flush()
+			sys.stdout.write(f'''\r
+   {F}Hits : {M}{ge}{Z} 
+   | Bad Tk: {M}{bt}{X} 
+   |Bad Em : {M}{be}{C} 
+   | Good Gk : {M}{gt}'''),sys.stdout.flush()
 		elif r['status']=='''registered''':
 			Gmail(email)
 			
 			gt+=1
-			sys.stdout.write(f'''\r{F}Hits : {M}{ge}{Z} | Bad Tk: {M}{bt}{X} |Bad Em : {M}{be}{C} | Good Gk : {M}{gt}'''),sys.stdout.flush()
+			sys.stdout.write(f'''\r
+   {F}Hits : {M}{ge}{Z} 
+   | Bad Tk: {M}{bt}{X} 
+   |Bad Em : {M}{be}{C} 
+   | Good Gk : {M}{gt}'''),sys.stdout.flush()
 		else:
 			''
 	except:
