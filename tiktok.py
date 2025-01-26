@@ -248,7 +248,8 @@ def Gmail(email):
 	{F}Hits : {M}{ge}{Z} 
  | Bad Tk: {M}{bt}{X} 
  |Bad Em : {M}{be}{C} 
- | Good Gk : {M}{gt}'''),sys.stdout.flush()
+ | Good Gk : {M}{gt}
+ Dev:AHMED_KHANA'''),sys.stdout.flush()
     else:
         
         be+=1
@@ -256,7 +257,8 @@ def Gmail(email):
 	{F}Hits : {M}{ge}{Z} 
  | Bad Tk: {M}{bt}{X} 
  |Bad Em : {M}{be}{C} 
- | Good Gk : {M}{gt}'''),sys.stdout.flush()
+ | Good Gk : {M}{gt}
+ Dev:AHMED_KHANA'''),sys.stdout.flush()
 
 def req(email):
 	global ge,be,gt,bt
@@ -269,7 +271,8 @@ def req(email):
    {F}Hits : {M}{ge}{Z} 
    | Bad Tk: {M}{bt}{X} 
    |Bad Em : {M}{be}{C} 
-   | Good Gk : {M}{gt}'''),sys.stdout.flush()
+   | Good Gk : {M}{gt}
+   Dev:AHMED_KHANA'''),sys.stdout.flush()
 		elif r['status']=='''registered''':
 			Gmail(email)
 			
@@ -278,7 +281,8 @@ def req(email):
    {F}Hits : {M}{ge}{Z} 
    | Bad Tk: {M}{bt}{X} 
    |Bad Em : {M}{be}{C} 
-   | Good Gk : {M}{gt}'''),sys.stdout.flush()
+   | Good Gk : {M}{gt}
+   Dev:AHMED_KHANA'''),sys.stdout.flush()
 		else:
 			''
 	except:
@@ -414,8 +418,8 @@ def men():
 ██║░╚██╗██║░░██║██║░░██║██║░╚███║
 ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
-1 - random 
-2 - List 
+1 - صيد عشوائي
+2 - صيد من لسته 
 	''')
 	try:
 		ii =int(input('Choice : '))
