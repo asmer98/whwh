@@ -380,7 +380,7 @@ def hso1():
                     ud = (users['user_info']['uid'])
                     user=(users['user_info']['unique_id'])
                     fol =(users['user_info']['follower_count'])
-                    if int(fol)>=100:
+                    if int(fol)>=50:
                     	pass
                     else:
                     	continue
