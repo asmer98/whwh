@@ -58,8 +58,8 @@ M = '\x1b[1;37m'#ابیض
 hit,ge,be,gt,bt=0,0,0,0,0
 VSD=5
 hhp=[]
-iid ="110484930"
-tok= "7834730402:AAFb9FexPgi-42oGn28YbDOkzYOYakFeF9s"
+iid =inbut('id :')
+tok= inbut('token :')
 def info(email):
   global hit,iid,tok
   hit+=1
@@ -380,7 +380,7 @@ def hso1():
                     ud = (users['user_info']['uid'])
                     user=(users['user_info']['unique_id'])
                     fol =(users['user_info']['follower_count'])
-                    if int(fol)>=500:
+                    if int(fol)>=200:
                     	pass
                     else:
                     	continue
