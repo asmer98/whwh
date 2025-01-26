@@ -59,7 +59,7 @@ hit,ge,be,gt,bt=0,0,0,0,0
 VSD=5
 hhp=[]
 iid =input(F+"ID:" )
-tok=input(S+"TOKEN:")
+tok=input(A+"TOKEN:"+S)
 def info(email):
   global hit,iid,tok
   hit+=1
