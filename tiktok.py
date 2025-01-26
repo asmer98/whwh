@@ -58,8 +58,8 @@ M = '\x1b[1;37m'#ابیض
 hit,ge,be,gt,bt=0,0,0,0,0
 VSD=5
 hhp=[]
-iid =inbut('id :')
-tok= inbut('token :')
+iid =input({F}'id :')
+tok= input({S}'token :')
 def info(email):
   global hit,iid,tok
   hit+=1
