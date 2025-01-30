@@ -7,13 +7,13 @@ token ='8183531292:AAFQ49SDd47IoFqNoS5dZxBn2duGeSrlZeQ'
 #-----------------------------------------------#
 
 def filter(username):
-  #tok='038d9c5109adc47bc20bf35e9743e2cae7055264fdbb602511267c829c63f34d0811a71d4bc965fd6bd3db1a97967a018042e01d9eeb6824557fbaa5f40ceb87b0517b4fc3b59e7a534ed072154e92c2a782dc69971bb841c438caf6fe77912ef37a2-CkBhNDU0OTY2YjQ5YzIwZmNkYWRhZGNmYTk1MWY1YTJlOTRmNzFkNTA1ZjY1NjQ3NzM5NDZlNzJiYjViNTE0ZGIy-2.0.0'
-  url=f'https://api16-normal-c-alisg.tiktokv.com/aweme/v1/unique/id/check/?unique_id={username}&request_tag_from=h5&manifest_version_code=350302&_rticket=1737988969227&app_language=ar&app_type=normal&iid=7398181872725722886&channel=googleplay&device_type=HRY-LX1MEB&language=ar&host_abi=arm64-v8a&locale=ar&resolution=1080*2139&openudid=94d30fe1fa54ad3c&update_version_code=350302&ac2=wifi&cdid=70390870-9e9d-4479-8661-a5f371645149&sys_region=IQ&os_api=29&timezone_name=Asia%2FBaghdad&dpi=480&carrier_region=IQ&ac=wifi&device_id=7398181346055390726&os_version=12&timezone_offset=10800&version_code=350302&app_name=musically_go&ab_version=35.3.2&version_name=35.3.2&device_brand=HONOR&op_region=IQ&ssmix=a&device_platform=android&build_number=35.3.2&region=IQ&aid=1340&ts=1737988890'
+  #tok='033f407d949ef8fae11fe16f51e898fd450339e8eec438c108e617c0fc037b29784103be4af7a0cfb2c12ec623572598897c21b57b209eacc5f51706d7c2df2e5a16f4be055e1beba3ccc836a019e008939106bd60dd6349221bf0f075112a33d0221-CkAzOWU3MjZiNjBkNDE2YzdiYWVmYjAzZjM2MGMxZTE2MDIxOTM5MGY1ZjJiMmU3NDY4ZWZjNzlhODNiN2JlOTRj-2.0.0'
+  url=f'https://api16-normal-c-alisg.tiktokv.com/aweme/v1/unique/id/check/?unique_id={username}&request_tag_from=h5&manifest_version_code=350302&_rticket=1738274664918&app_language=ar&app_type=normal&iid=7398181872725722886&channel=googleplay&device_type=HRY-LX1MEB&language=ar&host_abi=arm64-v8a&locale=ar&resolution=1080*2139&openudid=94d30fe1fa54ad3c&update_version_code=350302&ac2=wifi&cdid=70390870-9e9d-4479-8661-a5f371645149&sys_region=IQ&os_api=29&timezone_name=Asia%2FBaghdad&dpi=480&carrier_region=IQ&ac=wifi&device_id=7398181346055390726&os_version=12&timezone_offset=10800&version_code=350302&app_name=musically_go&ab_version=35.3.2&version_name=35.3.2&device_brand=HONOR&op_region=IQ&ssmix=a&device_platform=android&build_number=35.3.2&region=IQ&aid=1340&ts=1738274563'
   headers = {
                     'x-tt-req-timeout': '90000',
                     'accept-encoding': 'gzip',
                     'sdk-version': '2',
-                    'x-tt-token': '038d9c5109adc47bc20bf35e9743e2cae7055264fdbb602511267c829c63f34d0811a71d4bc965fd6bd3db1a97967a018042e01d9eeb6824557fbaa5f40ceb87b0517b4fc3b59e7a534ed072154e92c2a782dc69971bb841c438caf6fe77912ef37a2-CkBhNDU0OTY2YjQ5YzIwZmNkYWRhZGNmYTk1MWY1YTJlOTRmNzFkNTA1ZjY1NjQ3NzM5NDZlNzJiYjViNTE0ZGIy-2.0.0',
+                    'x-tt-token': '033f407d949ef8fae11fe16f51e898fd450339e8eec438c108e617c0fc037b29784103be4af7a0cfb2c12ec623572598897c21b57b209eacc5f51706d7c2df2e5a16f4be055e1beba3ccc836a019e008939106bd60dd6349221bf0f075112a33d0221-CkAzOWU3MjZiNjBkNDE2YzdiYWVmYjAzZjM2MGMxZTE2MDIxOTM5MGY1ZjJiMmU3NDY4ZWZjNzlhODNiN2JlOTRj-2.0.0',
                     'user-agent': 'user-agent: com.zhiliaoapp.musically.go/330802 (Linux; U; Android 12; en_US; M2010J19CG; Build/SKQ1.211202.001;tt-ok/3.12.13.2-alpha.68-quictest) ',
                 }
                 
