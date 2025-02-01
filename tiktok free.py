@@ -1,3 +1,27 @@
+import os,sys,subprocess
+        
+subprocess.getoutput("pip install requests")
+import requests,sys,os,time
+
+
+yso = 'aass9909'
+
+# = = = = = = = = = = = = 
+
+Z = '\033[1;31m' #احمر
+X = '\033[1;33m' #اصفر
+
+# = = = = = = = = = = = =
+pss = input(Z+ " ادخل رمز الاداة")
+
+if pss ==yso:
+ print(X+ " بيك بخت الرمز صح")
+ time.sleep(2)
+ os.system('clear')
+
+else:
+ exit(Z+ ' الرمز غلط غبي😂 ')
+
 import os    
 from requests import get,post
 try:
@@ -58,9 +82,8 @@ M = '\x1b[1;37m'#ابیض
 hit,ge,be,gt,bt=0,0,0,0,0
 VSD=5
 hhp=[]
-iid =input
-tok=input('تم ايقاف الاداة من قبل المطور احمد خان
-	  للاشتراك راسلني خاص AHMED_KHANA
+iid =input(F+"ID: ")
+tok=input(G+"Token: "+S)
 def info(email):
   global hit,iid,tok
   hit+=1
