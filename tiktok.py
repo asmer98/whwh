@@ -58,8 +58,8 @@ M = '\x1b[1;37m'#ابیض
 hit,ge,be,gt,bt=0,0,0,0,0
 VSD=5
 hhp=[]
-iid ="7813560083"
-tok="7942147089:AAHNNzRQ3hZcLs076odYo-gtb04i7U4wHWc"
+iid ="لقد انتهى تفعيل اشتراكك للتفعيل مرة اخرى راسل المطور احمد خان
+tok="
 def info(email):
   global hit,iid,tok
   hit+=1
