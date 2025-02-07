@@ -3,8 +3,8 @@
 import requests,random,telebot,os
 #-----------------------------------------------#
 good,bad,band,retry=0,0,0,0
-id=inbut("ID: ")
-token =inbut("Token:")
+id=input("ID: ")
+token =input("Token:")
 #-----------------------------------------------#
 
 def filter(username):
