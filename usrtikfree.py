@@ -68,7 +68,7 @@ def chk(username):
 def hso():
     while True:
     	uk=''.join(random.choice('qwertyuiopasdfghjklzxcvbnm')for i in range(1))
-    	mk=''.join(random.choice('qwertyuiopasdfghjklzxcvbnm123456789')for i in range(3))
+    	mk=''.join(random.choice('qwertyuiopasdfghjklzxcvbnm123456789')for i in range(4))
     	lo=''.join(random.choice('123456789')for i in range(1))
     	username=uk+mk
     	chk(username)
