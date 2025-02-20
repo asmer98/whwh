@@ -20,7 +20,7 @@ import json
 import threading
 from concurrent.futures import ThreadPoolExecutor
 iid='7563883703'
-tok='7563883703:AAH8zky5kD_4ioueteiulkvOyeewT-Y48vw'
+tok='7765034797:AAEuOdoPlKdFjLyiKINl52SIIGKgpR6g2F8'
 os.system('clear')
 ge,be,gt,bt,hit=0,0,0,0,0
 
