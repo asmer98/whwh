@@ -171,7 +171,7 @@ Tle:AHMED_KHANA
             print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{Value} {MJ2}]{MJ}\n{M}by:Dragon\n{F}----------------")
             open("Android/key.txt",'a').write(f"{Value}")
             return
-        url = requests.get("https://raw.githubusercontent.com/asmer98/ins/refs/heads/main/tikkhan").text.splitlines()
+        url = requests.get("https://raw.githubusercontent.com/asmer98/ins/refs/heads/main/wessamtikcod").text.splitlines()
         if coding[0]not in url:
             print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{coding[0]} {MJ2}]{MJ}\n{M}by:Dragon\n{F}----------------")
             return
