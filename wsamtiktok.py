@@ -168,12 +168,12 @@ Tle:AHMED_KHANA
             key2 ="".join(random.choice("QWERTYUIOASDFGHJKLZXCVBNM")for _ in range(6))
             key3 = "".join(random.choice("QWERTYUIOASDFGHJKLZXCVBNM")for _ in range(4))
             Value = key+"-"+key2+"-"+key3
-            print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{Value} {MJ2}]{MJ}\n{M}by:Dragon\n{F}----------------")
+            print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{Value} {MJ2}]{MJ}\n{M}by:AHMED_KHANA\n{F}----------------")
             open("Android/key.txt",'a').write(f"{Value}")
             return
         url = requests.get("https://raw.githubusercontent.com/asmer98/ins/refs/heads/main/wessamtikcod").text.splitlines()
         if coding[0]not in url:
-            print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{coding[0]} {MJ2}]{MJ}\n{M}by:احمد خان\n{F}----------------")
+            print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{coding[0]} {MJ2}]{MJ}\n{M}by:AHMED_KHANA\n{F}----------------")
             return
         else:
             self.ids()
