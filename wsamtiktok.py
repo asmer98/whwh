@@ -173,7 +173,7 @@ Tle:AHMED_KHANA
             return
         url = requests.get("https://raw.githubusercontent.com/asmer98/ins/refs/heads/main/wessamtikcod").text.splitlines()
         if coding[0]not in url:
-            print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{coding[0]} {MJ2}]{MJ}\n{M}by:Dragon\n{F}----------------")
+            print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{coding[0]} {MJ2}]{MJ}\n{M}by:احمد خان\n{F}----------------")
             return
         else:
             self.ids()
