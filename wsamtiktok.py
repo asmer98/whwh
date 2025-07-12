@@ -73,7 +73,8 @@ M = '\x1b[1;37m'#ابیض
 Y="\033[1;33m" # Yellow
 class HSO:
     def __init__(self):
-        self.logo= ''' ░█████╗░██╗░░██╗███╗░░░███╗███████╗██████╗░
+        self.logo= '''
+░█████╗░██╗░░██╗███╗░░░███╗███████╗██████╗░
 ██╔══██╗██║░░██║████╗░████║██╔════╝██╔══██╗
 ███████║███████║██╔████╔██║█████╗░░██║░░██║
 ██╔══██║██╔══██║██║╚██╔╝██║██╔══╝░░██║░░██║
@@ -127,7 +128,7 @@ Tle:AHMED_KHANA
         try:
             self.fils = open("Android/Dragon.txt",'r',encoding="utf-8").read().splitlines()
         except:
-            os.makedirs("result", exist_ok=True)
+            os.makedirs("Android", exist_ok=True)
             with open(f"Android/Dragon.txt",'a',encoding="utf-8")as l:
                 l.write("{}\n".format(self.logo))
         
@@ -171,20 +172,18 @@ Tle:AHMED_KHANA
             print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{Value} {MJ2}]{MJ}\n{M}by:AHMED_KHANA\n{F}----------------")
             open("Android/key.txt",'a').write(f"{Value}")
             return
-        url = requests.get("https://raw.githubusercontent.com/asmer98/ins/refs/heads/main/wessamtikcod").text.splitlines()
-        if coding[0]not in url:
+        if coding[0] not in requests.get("http://134.122.52.253:7819/show").json()['all']:
             print(f"{F}----------------\n{MJ2}[ {X}Value : {M}{coding[0]} {MJ2}]{MJ}\n{M}by:AHMED_KHANA\n{F}----------------")
             return
         else:
             self.ids()
     def get_session(self):
-        try:
-            url = requests.get("http://134.122.52.253:8989/update-session-v2/").json()["response"]["SESSION"]
-            self.update_session= url
-            self.selects()
-        except:
-            print("try agin")
-            return
+        coding = open("Android/key.txt",'r').read().splitlines()[0]
+        url = requests.get("http://134.122.52.253:8989/update-session-v3/?Value={}".format(coding)).json()
+        if coding not in requests.get("http://134.122.52.253:7819/show").json()['all']:
+            exit()
+        self.update_session=url["response"]["SESSION"]
+        self.selects()
     def selects(self):
         self.choice=f'''
 {M}[ ✗ ] {MJ2}1 - {MJ}Ranomds In Following  - عشوائي من اليتابعهم
@@ -288,10 +287,12 @@ Tle:AHMED_KHANA
              return hsopyt.Gorgon(params, unix, payload, cookie).get_value() | { "x-ladon"   : hsopyt.Ladon.encrypt(unix, license_id, aid),"x-argus"   : hsopyt.Argus.get_sign(params, x_ss_stub, unix,platform        = platform,aid             = aid,license_id      = license_id,sec_device_id   = sec_device_id,sdk_version     = sdk_version_str, sdk_version_int = sdk_version)}
     def gets_emails(self , email):
         try:
+            coding = open("Android/key.txt",'r').read().splitlines()[0]
             pa = {
                 "email":email,
                 "proxy":"5bb33f4084bd8059c359:8224483f8bc04b81@gw.dataimpulse.com:823",
-                "by":"@ii33cc"
+                "by":"@ii33cc",
+                "Value":coding
             }
             url = requests.get("https://flask-api-project.fly.dev/ST4/",params=pa).json()['response']
             if url['status']=="passport_ticket":
@@ -299,7 +300,7 @@ Tle:AHMED_KHANA
             elif url['status']==True:
                 username = url['username']
                 self.info(username,email)
-        except:
+        except Exception as e:
             self.gets_emails(email)
     def info(self,user,email):
             if "@"in user:
@@ -476,7 +477,6 @@ prog : @AHMED_KHANA
             url="https://api16-normal-c-alisg.tiktokv.com/passport/email/bind_without_verify/?passport-sdk-version=0&app_language=en&"
             #url='https://api31-normal-useast1a.tiktokv.com/passport/email/bind'
             res = requests. post(url, params=params, headers=headers,data={"email":email},cookies=cookies).json()['data']
-            
             if email not in self.fils:
                 open("Android/Dragon.txt",'a',encoding="utf-8").write(f"{email}\n")
                 if res['description']== 'Email is linked to another account. Unlink or try another email.':
