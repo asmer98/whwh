@@ -1,97 +1,106 @@
 
 
 
-#==========[الاصدار السادس]============
-import requests,random,telebot,os
-#-----------------------------------------------#
-good,bad,band,retry=0,0,0,0
-id=input('ID: ')
-token =input('Token:  ')
-#-----------------------------------------------#
+import os,sys,subprocess,webbrowser 
+subprocess.getoutput("pip install mechanize")
+import requests,sys,os,time
 
-def filter(username):
-  #tok='039ecbde9fafcbec7f11557097434fa23f0204f42592524c40e1d428d07f769a69a2092c5524b3b27c6b14daae6cf278b94544bd44920ed497b57b72bd10465cb226f99d02fb312aaff39ca78aa29836e4134ebacd4c63cd94a2a52546941faf6f80d--0a4e0a20854ac85c4e1cb97835d9397edda2099e3f444b7da594ad54fe4bcccc3cca330612206f52369068fdf6db037d160edba80fba5f3128cce8abca48d3d2975a6d88b34c1801220674696b746f6b-3.0.0'
-  url=f'https://api19-normal-c-alisg.tiktokv.com/aweme/v1/unique/id/check/?unique_id={username}&request_tag_from=h5&manifest_version_code=350302&_rticket=1752504062284&app_language=ar&app_type=normal&iid=7477881563939030802&channel=googleplay&device_type=HRY-LX1MEB&language=ar&host_abi=arm64-v8a&locale=ar&resolution=1080*2139&openudid=94d30fe1fa54ad3c&update_version_code=350302&ac2=wifi&cdid=70390870-9e9d-4479-8661-a5f371645149&sys_region=IQ&os_api=29&timezone_name=Asia%2FBaghdad&dpi=480&ac=wifi&device_id=7398181346055390726&os_version=12&timezone_offset=10800&version_code=350302&app_name=musically_go&ab_version=35.3.2&version_name=35.3.2&device_brand=HONOR&op_region=IQ&ssmix=a&device_platform=android&build_number=35.3.2&region=IQ&aid=1340&ts=1752504035'
-  headers = {
-                    'x-tt-req-timeout': '90000',
-                    'accept-encoding': 'gzip',
-                    'sdk-version': '2',
-                    'x-tt-token': '039ecbde9fafcbec7f11557097434fa23f0204f42592524c40e1d428d07f769a69a2092c5524b3b27c6b14daae6cf278b94544bd44920ed497b57b72bd10465cb226f99d02fb312aaff39ca78aa29836e4134ebacd4c63cd94a2a52546941faf6f80d--0a4e0a20854ac85c4e1cb97835d9397edda2099e3f444b7da594ad54fe4bcccc3cca330612206f52369068fdf6db037d160edba80fba5f3128cce8abca48d3d2975a6d88b34c1801220674696b746f6b-3.0.0',
-                    'user-agent': 'user-agent: com.zhiliaoapp.musically.go/330802 (Linux; U; Android 12; en_US; M2010J19CG; Build/SKQ1.211202.001;tt-ok/3.12.13.2-alpha.68-quictest) ',
-                }
-                
-  try:response = requests.get(url,cookies=None,headers=headers,).text
-  except:print('لايتوفر اتصال في الانترنت')
-  #الاتصال
-  if '"is_valid":true' in response:return True
-  elif '"is_valid":false' in response:return False
-  elif response == '':return 'retry'
-#-----------------------------------------------#
-def chk(username):
-  try:response = requests.get(f'https://tiktok.com/@{username}',headers = {'User-Agent': "Mozilla/5.0 (Windos; CPU Mac OS 17_9_82 like Linux OS X) AppleWebKit/397.7.93 (KHTML, like Gecko) Version/29.8 Mobile/15E148 FireFox/899.9"}).text
-  except:print('لايتوفر اتصال في الانترنت')
-  if '"nickname":' in response:return False
-  else:return True
-#-----------------------------------------------#
-def check(username):
-  try:
-	  req = chk(username)
-	  if req == True:
-	    response = filter(username)
-	    if response == True:
-	      return True
-	    elif response == False:
-	      return 'band'
-	    elif response == 'retry':
-	      return 'retry'
-	  else:return False
-  except:print('no intrnit')
-    
-#-----------------------------------------------#
-def all():
-  logo= '''\033[96m░█████╗░██╗░░██╗███╗░░░███╗███████╗██████╗░
+#webbrowser.open('https://t.me/ahmedapssd')
+import requests 
+import random 
+Z = '\033[1;31m' #احمر
+X = '\033[1;33m' #اصفر
+Z1 = '\033[2;31m' #احمر ثاني
+F = '\033[1;32m' #اخضر
+A = '\033[2;34m'#ازرق
+C = '\033[2;35m' #وردي
+B = '\033[2;36m'#سمائي
+Y = '\033[1;34m' #ازرق فاتح
+insta="1234567890qwertyuiopasdfghjklzxcvbnm"
+ajw="."
+#------------------colors---------------#
+B="\033[1;30m" # Black
+R="\033[1;31m" # Red
+G="\033[1;32m" # Green
+Y="\033[1;33m" # Yellow
+Bl="\033[1;34m" # Blue
+P="\033[1;35m" # Purple
+C="\033[1;36m" # Cyan
+W="\033[1;37m" # White
+E = "\033[0;90m" #رمادي
+#------------------logo---------------------#
+import pyfiglet
+ajaj = pyfiglet.figlet_format('    ')
+print(F+ajaj)
+print('''░█████╗░██╗░░██╗███╗░░░███╗███████╗██████╗░
 ██╔══██╗██║░░██║████╗░████║██╔════╝██╔══██╗
 ███████║███████║██╔████╔██║█████╗░░██║░░██║
 ██╔══██║██╔══██║██║╚██╔╝██║██╔══╝░░██║░░██║
 ██║░░██║██║░░██║██║░╚═╝░██║███████╗██████╔╝
 ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═════╝░
 
+Tle:AHMED_KHANA
+
 ██╗░░██╗██╗░░██╗░█████╗░███╗░░██╗
 ██║░██╔╝██║░░██║██╔══██╗████╗░██║
 █████═╝░███████║███████║██╔██╗██║
 ██╔═██╗░██╔══██║██╔══██║██║╚████║
 ██║░╚██╗██║░░██║██║░░██║██║░╚███║
-╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
+╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝''')
+#-------------------------logo ---------------------------#
+id=input(f"{F} id --->{C}")
+token=input(f"{F} token--->{C}")
 
-
-
-'''
-  global good,bad,band,retry
-  while True:
-    uk=''.join(random.choice('qwertyuiop1234567890asdfghjkl')for i in range(5))
-    mk=''.join(random.choice('qwertyuiopasdfghjklzxcvbnm123456789')for i in range(1))
-    lo=''.join(random.choice('123456wertyuiopasdfghjklzxcvbnm789')for i in range(1))
-    username=uk
-    req=check(username)
-    if req == True:
-      
-      good+=1
-      tlg=f'- AHMED Get New Hit : {username}\n- By : @AHMED_KHANA'
-      telebot.TeleBot(token).send_message(id,str(tlg))
-      with open('h.txt','+a')as j:
-        j.write(str(tlg)+'\n')
-      with open('hitTIK.txt','a') as f:
-        f.write(username+'\n')
-    elif req == 'band':
-      band+=1
-    elif req == False:
-      bad+=1
-    elif req == 'retry':
-      retry+=1
-    os.system('clear' if os.name == 'posix' else 'cls')
-    #print(f'{logo}\n\033[96m====================\n\033[92mGood : \033[1;97m{good}\n\033[91mBad : \033[1;97m{bad}\n\033[94mBand : \033[1;97m{band}\n\033[95mRetry : \033[1;97m{retry}\n\033[96m====================\n\033[1mProgrammer : \033[93mAHMED_KHANA\n{username}')
-    print(f'Good : \033[1;97m{good}\033[91m ~ Bad : \033[1;97m{bad}\033[94m ~ Band : \033[1;97m{band}\033[95m ~ Retry : \033[1;97m{retry}\033[96m ')
-#-----------------------------------------------#
-from threading import Thread as hso
-for i in range(8):
-  hso(target=all).start()
+#webbrowser.open('https://t.me/ahmedapssd')
+def instaa(user):
+    url = requests.post('https://www.instagram.com/accounts/web_create_ajax/attempt/',headers ={'Host':'www.instagram.com',
+'content-length':'85',
+'sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"',
+'x-ig-app-id':'936619743392459',
+'x-ig-www-claim':'0',
+'sec-ch-ua-mobile':'?0',
+'x-instagram-ajax':'81f3a3c9dfe2',
+'content-type':'application/x-www-form-urlencoded',
+'accept':'*/*',
+'x-requested-with':'XMLHttpRequest',
+'x-asbd-id':'198387',
+'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36',
+'x-csrftoken':'jzhjt4G11O37lW1aDFyFmy1K0yIEN9Qv',
+'sec-ch-ua-platform':'"Linux"',
+'origin':'https://www.instagram.com',
+'sec-fetch-site':'same-origin',
+'sec-fetch-mode':'cors',
+'sec-fetch-dest':'empty',
+'referer':'https://www.instagram.com/accounts/emailsignup/',
+'accept-encoding':'gzip, deflate, br',
+'accept-language':'en-IQ,en;q=0.9',
+'cookie':'csrftoken=jzhjt4G11O37lW1aDFyFmy1K0yIEN9Qv',
+'cookie':'mid=YtsQ1gABAAEszHB5wT9VqccwQIUL',
+'cookie':'ig_did=227CCCC2-3675-4A04-8DA5-BA3195B46425',
+'cookie':'ig_nrcb=1'},data=f'email=aakmnnsjskksmsnsn%40gmail.com&username={user}&first_name=&opt_into_one_tap=false')
+    if '{"message":"feedback_required","spam":true,"feedback_title":"Try Again Later","feedback_message":"We limit how often you can do certain things on Instagram to protect our community. Tell us if you think we made a mistake.","feedback_url":"repute/report_problem/scraping/","feedback_appeal_label":"Tell us","feedback_ignore_label":"OK","feedback_action":"report_problem","status":"fail"}' in url.text:
+        print(W+f" » {Z} no user » {Z}{user} ")
+    elif  '"errors": {"username":' in url.text or  '"code": "username_is_taken"' in url.text:
+        print(W+f" »{Z} no user » {Z}{user} ")
+    else:
+        email=0
+        print(W+f" » {G} yas user» {F}{user} ")
+        email+=1
+        god=f"""{user}"""
+        requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={id}&text={god}')
+def users():
+    ran1="1234567890..qwertyuiopasdfghjklzxvcbnm.."
+    while True:
+        v1 = str(''.join((random.choice(insta) for i in range(1))))
+        v2 = str(''.join((random.choice(insta) for i in range(1))))
+        v3 = str(''.join((random.choice(insta) for i in range(1))))
+        v4 = str(''.join((random.choice(insta) for i in range(1))))
+        v5 = str(''.join((random.choice(ajw) for i in range(1))))
+        user1 = (v5+v1+v2+v3+v4)
+        user2 = (v1+v5+v2+v3+v4)
+        user3 = (v1+v2+v5+v3+v4)
+        user4 = (v1+v2+v3+v5+v4)
+        ajwad= (user1, user2, user3, user4)
+        user = random.choice(ajwad)
+        instaa(user)
+users()
